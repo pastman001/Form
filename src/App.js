@@ -1,19 +1,18 @@
 import React from "react";
 import "./style.css";
-import { DelAk } from "./components/DelAk";
+import { Date } from "./components/Date";
+import { DelAk } from "./components/DelAc";
 import { SingIn } from "./components/SingIn";
 import { SingUp } from "./components/SingUp";
 import { Routes, Route } from "react-router-dom";
+import { withC } from "./hoc/withC";
 
 export const App = () => {
+  const Test = withC(Date);
   return (
     <>
       <div className="notmain">
-        <div className="notmain">
-          <div className="notmain">Имя</div>
-          <div className="notmain">Имейл</div>
-          <div className="notmain">Пароль</div>
-        </div>
+        <Test />
         <Routes>
           <Route path="/" element={<SingUp />}></Route>
           <Route path="/1" element={<SingIn />}></Route>

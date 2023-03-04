@@ -17,8 +17,14 @@
     text-align: center;
     padding: 10px;
 }
-.img {
-    margin: auto;
-    padding: auto;
-    width: 50%;
+.textArea {
+    width: 90%;
+    font-size: 100%;
+    margin: 10px ;
+    padding: 10px;
+}
+.gridArea {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr;
 }
