@@ -1,19 +1,28 @@
 import { useState } from "react";
 
 export const SingUp = () => {
+  const mainData = [];
+
   const [text, setText] = useState({
     lastName: "",
     birthday: "",
     phoneNumber: "",
+    id: 0,
   });
+
   const changeHandler = (e) => {
     setText((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
+
+  const dataHandler = () => {
+    mainData.push({ ...text });
+    text.id++;
+  };
   return (
-    <div className="notmain">
+    <div className="mainContainer">
       <div>
         <div>Фамилия</div>
         <input
@@ -44,7 +53,7 @@ export const SingUp = () => {
           onChange={changeHandler}
         />
       </div>
-      <button>Зарегистрироваться</button>
+      <button onClick={dataHandler}>Зарегистрироваться</button>
     </div>
   );
 };

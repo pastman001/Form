@@ -4,7 +4,7 @@ import React from "react";
 
 const arr = { name: "Steven", email: "star123@gmail.com", password: "12345" };
 
-export const withC = (MyComp) => {
+export const withData = (MyComp) => {
   return (props) => {
     return <MyComp {...arr} {...props} />;
   };

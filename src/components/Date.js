@@ -15,7 +15,7 @@ export const Date = (props) => {
   };
   return (
     <>
-      <div className="notmain">
+      <div className="mainContainer">
         <div>
           <div>Имя</div>
           <input

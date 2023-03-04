@@ -8,7 +8,7 @@ export const DelAk = () => {
     setTextArea(text);
   };
   return (
-    <form className="notmain">
+    <form className="mainContainer">
       <div>Удаление аккаунта</div>
       <input
         className="textArea"
