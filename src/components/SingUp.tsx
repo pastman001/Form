@@ -1,16 +1,22 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
 export const SingUp = () => {
   const mainData = [];
-
-  const [text, setText] = useState({
-    lastName: "",
-    birthday: "",
-    phoneNumber: "",
+  const stateData: {
+    lastName: string;
+    birthday: string;
+    phoneNumber: string;
+    id: number;
+  } = {
+    lastName: '',
+    birthday: '',
+    phoneNumber: '',
     id: 0,
-  });
+  };
 
-  const changeHandler = (e) => {
+  const [text, setText] = useState(stateData);
+
+  const changeHandler: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setText((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -29,7 +35,7 @@ export const SingUp = () => {
           name="lastName"
           type="text"
           className="textArea"
-          value={text.name}
+          value={text.lastName}
           onChange={changeHandler}
         />
       </div>
@@ -39,7 +45,7 @@ export const SingUp = () => {
           name="birthday"
           type="text"
           className="textArea"
-          value={text.email}
+          value={text.birthday}
           onChange={changeHandler}
         />
       </div>
@@ -49,7 +55,7 @@ export const SingUp = () => {
           name="phoneNumber"
           type="text"
           className="textArea"
-          value={text.password}
+          value={text.phoneNumber}
           onChange={changeHandler}
         />
       </div>

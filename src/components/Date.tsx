@@ -1,13 +1,12 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from 'react';
 
-export const Date = (props) => {
+export const Date = (props: { name: string; email: string; password: string }) => {
   const [text, setText] = useState({
-    name: props.name || "",
-    email: props.email || "",
-    password: props.password || "",
+    name: props.name || '',
+    email: props.email || '',
+    password: props.password || '',
   });
-  const changeHandler = (e) => {
+  const changeHandler: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setText((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,

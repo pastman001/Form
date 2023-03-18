@@ -1,21 +1,15 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from 'react';
 
 export const DelAk = () => {
-  const [textArea, setTextArea] = useState("");
-  const updateText = (event) => {
-    let text = event.target.value;
+  const [textArea, setTextArea] = useState('');
+  const updateText: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+    const text = event.target.value;
     setTextArea(text);
   };
   return (
     <form className="mainContainer">
       <div>Удаление аккаунта</div>
-      <input
-        className="textArea"
-        type="text"
-        value={textArea}
-        onChange={updateText}
-      />
+      <input className="textArea" type="text" value={textArea} onChange={updateText} />
       <div>Оцените работу приложения</div>
       <div className="gridArea">
         <div>
